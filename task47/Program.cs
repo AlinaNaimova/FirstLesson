@@ -36,26 +36,26 @@ int GetNumber(string message)
     return result;
 }
 
-void FillArrayRandomNumbers(double[,] array)
+void FillArrayRandomNumbers(double[,] numbers)
 {
     Random rnd = new Random();
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < numbers.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < numbers.GetLength(1); j++)
         {
-            array[i, j] = Convert.ToDouble(rnd.Next(-100, 100))/10;
+            numbers[i, j] = Convert.ToDouble(rnd.Next(-100, 100))/10;
         }
     }
 }
 
-void PrintArray(double[,] array)
+void PrintArray(double[,] numbers)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < numbers.GetLength(0); i++)
     {
         Console.Write("[ ");
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < numbers.GetLength(1); j++)
         {
-            Console.Write(array[i, j] + " ");
+            Console.Write(numbers[i, j] + " ");
         }
         Console.Write("]");
         Console.WriteLine("");
